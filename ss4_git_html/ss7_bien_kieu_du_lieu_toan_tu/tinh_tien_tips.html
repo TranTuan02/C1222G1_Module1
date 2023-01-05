@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng tính tiền tips</title>
+</head>
+<body>
+<fieldset style="height: 500px;width: 300px">
+    <h1>TIP CALCULATOR</h1>
+
+    <table>
+        <tr>
+            <td>
+                <p>How much was your bill ?</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                $ <input type="number" name="bill" id="pay">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>How was your service ?</p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <select style="height: 50px;width: 150px" id="service">
+                    <option value="service"></option>
+                    <option value="30">30% - Outstanding</option>
+                    <option value="20">20% - Good</option>
+                    <option value="15">15% - It was OK</option>
+                    <option value="10">10% - BAD</option>
+                    <option value="5">5% - Terrible</option>
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <p> How many people are sharing the bill ? </p>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="number" name="people" id="people"> people <br>
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <button onclick="Calculate()">CALCULATE!</button>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <p> TIP AMOUNT</p>
+            </th>
+        </tr>
+        <tr>
+            <th id="money">
+                $
+            </th>
+        </tr>
+        <tr>
+            <th>
+                each
+            </th>
+        </tr>
+    </table>
+</fieldset>
+<p id="tips"></p>
+</body>
+<script src="tinh_tien_tips.js"></script>
+</html>
