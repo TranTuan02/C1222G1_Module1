@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lương thưởng</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Số tiền lương của nhân viên là : ");
+    let b = +prompt("Số giờ làm việc của nhân viên là : ");
+    let bonus;
+    if (b >= 200) {
+        bonus = a * 20 / 100;
+    } else if (b >= 100 && b < 200) {
+        bonus = a * 10 / 100
+    } else if (b < 100) {
+        document.write("Không được thưởng");
+    }
+    document.write("Số tiền thưởng của nhân viên là : " + bonus);
+</script>
+</body>
+</html>

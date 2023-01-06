@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th> <input type="number" id ="amount"></th>
+        <th><select id="from">
+            <option value="USD">USD</option>
+<!--            <option value="JPY">JPY</option>-->
+<!--            <option value="VND">VND</option>-->
+<!--            <option value="RMB">RMB</option>-->
+<!--            <option value="GBP">GBP</option>-->
+        </select></th>
+        <th><select id="to">
+<!--            <option value="USD">USD</option>-->
+            <option value="JPY">JPY</option>
+            <option value="VND">VND</option>
+            <option value="RMB">RMB</option>
+            <option value="GBP">GBP</option>
+        </select></th>
+        <th>
+            <button onclick="Currency()">Convert</button>
+        </th>
+    </tr>
+</table>
+<p id="Money"></p>
+</body>
+<script src="chuyen_doi_tien_te.js"></script>
+</html>

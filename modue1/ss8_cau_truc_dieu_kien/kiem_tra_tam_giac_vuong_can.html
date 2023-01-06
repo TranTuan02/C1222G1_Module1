@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam giác vuông cân</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập độ dài cạnh a : ");
+    let b = +prompt("Nhâp độ dài cạnh b : ");
+    let c = +prompt("Nhập độ dài cạnh c : ");
+    if (a > 0 && b > 0 && c > 0) {
+        if (a == b && a == c) {
+            document.write("ba cạnh là cạnh của tam giác vuông cân");
+        } else if (a > b && a > c) {
+            document.write("ba cạnh không phải là cạnh của tam giác vuông cân");
+        } else if (b > a && b > c) {
+            document.write("ba cạnh không phải là cạnh của tam giác vuông cân");
+        } else if (c > a && c > b) {
+            document.write("ba cạnh không phải là cạnh của tam giác vuông cân");
+        }
+    } else
+        document.write("độ dài không hợp lệ");
+</script>
+</body>
+</html>

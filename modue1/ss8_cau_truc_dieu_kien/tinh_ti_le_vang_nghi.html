@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tỉ lệ vắng nghỉ</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Tổng số buổi của module là : ");
+    let b = +prompt("Tổng số buổi nghỉ của module là : ");
+    let r;
+    r = (b / a) * 100;
+    if (r > 10 && r < 20) {
+        document.write("Gửi mail cảnh báo học viên ");
+    } else if (r >= 20) {
+        document.write("Học lại đi bạn êyyyy");
+    } else if (r <= 10) {
+        document.write("Tiếp tục học");
+    }
+</script>
+</body>
+</html>
