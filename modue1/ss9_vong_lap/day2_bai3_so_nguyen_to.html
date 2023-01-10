@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+
+    for (let i = 0; ; i++) {
+        let n = +prompt("Nhập vào số muốn kiểm tra");
+        if (n % 2 == 1 || n % 3 == 1) {
+            alert(" là số nguyên tố : ");
+            break;
+        } else {
+            alert("Không phải là số nguyên tố")
+        }
+    }
+</script>
+</body>
+</html>

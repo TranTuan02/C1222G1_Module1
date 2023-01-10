@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập số tuổi của cha");
+    let m = +prompt("Nhập số tuổi của con");
+    let count = 1;
+    let year;
+    for (let i = 1; i < m; i++) {
+        for (let j = 1; j < n; j += 2) {
+            if (n > 25) {
+                year = n - 2 * m;
+                count++;
+            }
+        }
+    }
+    document.write("tuổi cha gấp đôi tuổi con sau : " + year + "năm");
+</script>
+</body>
+</html>

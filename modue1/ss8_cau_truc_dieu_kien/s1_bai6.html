@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 6</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập lương cứng nhân viên : ");
+    let b = +prompt("Nhập số danh thu đã bán trong tháng : ");
+    let hoaHong;
+    if (b > 10000000) {
+        hoaHong = b * 10 / 100 + a;
+        document.write(" Lương cơ bản và Hoa hồng nhân viên là : " + hoaHong);
+    } else if (5000000 < b && 10000000 > b) {
+        hoaHong = b * 5 / 100 + a;
+        document.write("Lương cơ bản và hoa hồng nhân viên là : " + hoaHong);
+    } else if (b < 5000000) {
+        document.write("Chỉ nhận lương là : " + a + "Không nhận được hoa hồng ");
+    }
+</script>
+</body>
+</html>

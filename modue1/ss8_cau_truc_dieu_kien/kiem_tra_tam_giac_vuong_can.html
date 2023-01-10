@@ -9,18 +9,15 @@
     let a = +prompt("Nhập độ dài cạnh a : ");
     let b = +prompt("Nhâp độ dài cạnh b : ");
     let c = +prompt("Nhập độ dài cạnh c : ");
-    if (a > 0 && b > 0 && c > 0) {
-        if (a == b && a == c) {
-            document.write("ba cạnh là cạnh của tam giác vuông cân");
-        } else if (a > b && a > c) {
-            document.write("ba cạnh không phải là cạnh của tam giác vuông cân");
-        } else if (b > a && b > c) {
-            document.write("ba cạnh không phải là cạnh của tam giác vuông cân");
-        } else if (c > a && c > b) {
-            document.write("ba cạnh không phải là cạnh của tam giác vuông cân");
-        }
-    } else
-        document.write("độ dài không hợp lệ");
+    if ((a * a + b * b == c * c) && (a == b)) {
+        document.write("Ba cạnh là cạnh của tam giác vuông cân , cân tại C");
+    } else if ((a * a + c * c == b * b) && (a == c)) {
+        document.write("Ba cạnh là cạnh của tam giác vuông cân , cân tại B");
+    } else if ((b * b + c * c == a * a) && (b == c)) {
+        document.write("Ba cạnh là cạnh của tam giác vuông cân , cân tại A");
+    } else {
+        document.write("Ba cạnh không phải là cạnh của tam giác vuông cân");
+    }
 </script>
 </body>
 </html>

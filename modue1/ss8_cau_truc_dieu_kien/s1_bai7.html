@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<script>
+    // phí thuê bao bắt buộc
+    const a = 25000;
+    let t = +prompt("Nhập thời gian sử dụng");
+    let phoneCharges;
+    if (t > 0 && t < 50) {
+        phoneCharges = t * 600 + 25000;
+        document.write("Cước điện thoại là : " + phoneCharges);
+    } else if (50 < t && t < 200) {
+        phoneCharges = t * 400 + 25000;
+        document.write("Cước điện thoại là : " + phoneCharges);
+    } else if (t > 200) {
+        phoneCharges = t * 200 + 25000;
+        document.write("Cước điện thoại là : " + phoneCharges);
+    }
+</script>
+</body>
+</html>
