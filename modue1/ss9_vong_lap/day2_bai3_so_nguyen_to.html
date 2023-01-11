@@ -7,15 +7,38 @@
 <body>
 <script>
 
-    for (let i = 0; ; i++) {
-        let n = +prompt("Nhập vào số muốn kiểm tra");
-        if (n % 2 == 1 || n % 3 == 1) {
-            alert(" là số nguyên tố : ");
+    // for (let i = 0; ; i++) {
+    //     let n = +prompt("Nhập vào số muốn kiểm tra");
+    //     if (n % 2 == 1 || n % 3 == 1) {
+    //         alert(" là số nguyên tố : ");
+    //         break;
+    //     } else {
+    //         alert("Không phải là số nguyên tố")
+    //     }
+    // }
+    let number;
+    let flag = true;
+    do {
+        number = +prompt("Nhập số muốn kiểm tra");
+        if (number === 2 || number === 3) {
+            document.write("Là số nguyên tố :");
             break;
         } else {
-            alert("Không phải là số nguyên tố")
+            // số muốn kiểm tra chia hết cho bao nhiêu số
+            let count = 0;
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count++;
+                }
+            }
+            if (count === 2) {
+                alert(" Là số nguyên tố");
+                flag = false;
+            } else {
+                alert("Không phải là số nguyên tố");
+            }
         }
-    }
+    } while (flag);
 </script>
 </body>
 </html>

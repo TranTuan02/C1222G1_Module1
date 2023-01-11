@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let array1 = [];
+    let n = +prompt("Nhập số lượng các phần tử trong mảng : ");
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt("Nhập các phần tử trong mảng : " + i);
+    }
+    document.write("Mảng vừa nhập là : " + array);
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i]; j++) {
+            if (Math.sqrt(array[i]) % j === 0) {
+                array1.push(array[i]);
+                break;
+            }
+        }
+    }
+    document.write("Số chính phương trong mảng là : " + array1);
+
+</script>
+
+</body>
+</html>

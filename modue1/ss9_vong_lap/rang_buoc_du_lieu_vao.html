@@ -6,15 +6,26 @@
 </head>
 <body>
 <script>
-    for (let i = 0; ; i++) {
-        let n = +prompt("Nhập số vào : ");
-        if (0 < n && n < 100) {
-            document.write("N thoả mãn điều kiện");
-            break;
-        } else {
-            alert("N không thỏa mãn điều kiện , hãy nhập lại ");
-        }
-    }
+    // for (let i = 0; ; i++) {
+    //     let n = +prompt("Nhập số vào : ");
+    //     if (0 < n && n < 100) {
+    //         document.write("N thoả mãn điều kiện");
+    //         break;
+    //     } else {
+    //         alert("N không thỏa mãn điều kiện , hãy nhập lại ");
+    //     }
+    // }
+    let number;
+    do {
+        number = +prompt("Nhập số bất kì :");
+            if (0 < number && number < 100) {
+                document.write("Thõa mãn điều kiện")
+                break;
+            } else {
+                alert("N không thõa mãn điều kiện , hãy nhập lại");
+            }
+
+    } while (0 >= number || number >= 100);
 </script>
 </body>
 </html>
