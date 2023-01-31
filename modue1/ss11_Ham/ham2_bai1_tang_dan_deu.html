@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let n = +prompt("Nhập số lượng phần tử của mảng : ");
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt("Các phần tử của mảng là : " + i);
+    }
+    document.write("Mảng sau khi thêm các phần tử là : " + array + "<br>");
+
+    function checkArray(array) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i + 1] > array[i]) {
+                count++;
+            }
+        }
+        if (count == array.length) {
+            return "OK";
+        } else {
+            return "NO";
+        }
+    }
+
+    document.write("Mảng hiển thị : " + checkArray(array));
+</script>
+
+</body>
+</html>

@@ -11,9 +11,15 @@
     for (let i = 0; i < n; i++) {
         array[i] = +prompt("Nhập các phần tử thứ : " + i);
     }
-    document.write("Mảng sau khi thêm các phần tử là : " + array);
-
+    document.write("Mảng sau khi thêm các phần tử là : " + array +"<br>");
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        if (array[i] % 2 !== 0 || i % 2 === 0) {
+            continue;
+        }
+        sum += array[i];
+    }
+    document.write("Tổng các phần tử chẵn ở vị trí lẽ là : " + sum);
 </script>
-
 </body>
 </html>

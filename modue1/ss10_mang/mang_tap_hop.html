@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let n = +prompt("Nhập các phần tử trong mảng");
+    for (let i = 0; i < n; i++) {
+        array[i] = +prompt("Nhập các phần tử thứ : " + i);
+    }
+    let i = 0;
+    let count = 0;
+    do {
+            for (let j = i-1; j >=0; j++) {
+                if (array[i] === array[j]) {
+                    document.write("Phần tử trùng nhau , hãy nhập lại : ");
+                    count = 1;
+                    break;
+                    // nếu phần tử nhập sau bằng số đã nhập trước đó
+                    // thì count=1
+                    // thoát khỏi vòng lặp
+                }
+            }
+            if (count == 1) {
+                // quay lại thực hiện thân vòng lặp do-while
+                continue;
+            } else {
+                //ngược lại tăng i lên 1
+                i++;
+            }
+    } while (i < n);
+    document.write("Mảng vừa nhập là : " + array[i]);
+</script>
+</body>
+</html>
