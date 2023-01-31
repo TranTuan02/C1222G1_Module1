@@ -8,31 +8,23 @@
 <script>
     let array = [];
     let n = +prompt("Nhập các phần tử trong mảng");
-    for (let i = 0; i < n; i++) {
-        array[i] = +prompt("Nhập các phần tử thứ : " + i);
-    }
     let i = 0;
-    let count = 0;
-    do {
-            for (let j = i-1; j >=0; j++) {
-                if (array[i] === array[j]) {
-                    document.write("Phần tử trùng nhau , hãy nhập lại : ");
-                    count = 1;
-                    break;
-                    // nếu phần tử nhập sau bằng số đã nhập trước đó
-                    // thì count=1
-                    // thoát khỏi vòng lặp
-                }
+    for (let i = 0; i < n; i++) {
+        do {
+            array[i] = +prompt("Nhập các phần tử thứ : " + i);
+        } while (!checkArray(array, i)) ;
+    }
+
+    function checkArray(array, i) {
+        for (let j = 0; j < i; j++) {
+            if (array[i] === array[j]) {
+                return false;
             }
-            if (count == 1) {
-                // quay lại thực hiện thân vòng lặp do-while
-                continue;
-            } else {
-                //ngược lại tăng i lên 1
-                i++;
-            }
-    } while (i < n);
-    document.write("Mảng vừa nhập là : " + array[i]);
+        }
+        return true;
+    }
+
+    document.write("Mảng sau khi nhập là " + array);
 </script>
 </body>
 </html>
