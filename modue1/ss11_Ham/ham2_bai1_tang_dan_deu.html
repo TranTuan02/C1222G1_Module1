@@ -14,13 +14,22 @@
     document.write("Mảng sau khi thêm các phần tử là : " + array + "<br>");
 
     function checkArray(array) {
-        let count = 0;
-        for (let i = 0; i < array.length; i++) {
-            if (array[i + 1] > array[i]) {
-                count++;
+        let array2 = [];
+        let hieu = 0;
+        for (let i = 0; i < array.length - 1; i++) {
+            hieu = array[i + 1] - array[i];
+            array2.push(hieu);
+        }
+        let flag = true;
+        for (let j = 0; j < array2.length; j++) {
+            let a = array2[0];
+            if (a === array2[j]) {
+                flag = true;
+            } else {
+                flag = false;
             }
         }
-        if (count == array.length) {
+        if (flag) {
             return "OK";
         } else {
             return "NO";

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bìa tập 3</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập số muốn kiêm tra : ");
+
+    function findMaxNumber() {
+        let array=n.split("");
+        if (999 < n && n < 10000) {
+            for (let i=0;i<array.length;i++){
+                if (array[i+1]>array[i]){
+                    array.splice(i,1);
+                    break;
+                }
+            }
+            return array.join("");
+        }else {
+            return "-1";
+        }
+    }
+    document.write(findMaxNumber(n));
+
+
+
+
+</script>
+
+</body>
+</html>
