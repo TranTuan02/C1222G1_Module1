@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<script>
+    class Account {
+        constructor(number, name, money) {
+            this.number = number;
+            this.name = name;
+            this.money = money;
+        }
+
+        getNumber() {
+            return this.number;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setNapTien(pay) {
+            this.money += pay;
+        }
+
+        getSoDu() {
+            return this.money;
+        }
+
+        setRutTien(Withdraw) {
+            if (Withdraw - this.money >= 0) {
+                alert("Không đủ điều kiện để rút : ");
+            } else {
+                this.money -= Withdraw;
+            }
+        }
+    }
+
+    let account = new Account("11041996", "Tuấn", 100000);
+    document.write(".Số tài khoản" + account.getNumber() + "<br>" + ".Tên tài khoản : " + account.getName() + "<br>" +
+        ".Số tiền trong tài khoản" + account.getSoDu() + "<br>");
+    account.setNapTien(+prompt("Nhập số tiền muốn nạp"));
+    document.write("Số tiền sau khi nạp tiền là : " + account.getSoDu() + "<br>");
+    account.setRutTien(+prompt("Nhập số tiền muốn rút"));
+    document.write("Số tiền sau khi rút là : " + account.getSoDu());
+
+</script>
+</body>
+</html>
