@@ -30,10 +30,10 @@
         }
 
         setRutTien(Withdraw) {
-            if (Withdraw - this.money >= 0) {
-                alert("Không đủ điều kiện để rút : ");
-            } else {
+            if (Withdraw > 0 && this.money >= Withdraw) {
                 this.money -= Withdraw;
+            } else {
+                alert("Không đủ điều kiện để rút : ");
             }
         }
     }
