@@ -9,19 +9,22 @@
     let n = prompt("Nhập số muốn kiêm tra : ");
 
     function findMaxNumber() {
-        let array=n.split("");
-        if (999 < n && n < 10000) {
-            for (let i=0;i<array.length;i++){
-                if (array[i+1]>=array[i]){
-                    array.splice(i,1);
+        let array = n.split("");
+        if (999 < n && n < 9999) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i + 1] > array[i]) {
+                    array.splice(i, 1);
                     break;
                 }
             }
             return array.join("");
-        }else {
+        } else if (n == 9999) {
+            return "999";
+        } else {
             return "-1";
         }
     }
+
     document.write(findMaxNumber(n));
 </script>
 </body>
