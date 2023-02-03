@@ -10,16 +10,18 @@
 
     function findMaxNumber() {
         let array = n.split("");
-        if (999 < n && n < 9999) {
-            for (let i = 0; i < array.length; i++) {
+        if (999 < n && n < 10000) {
+            for (let i = 0; i < array.length - 1; i++) {
                 if (array[i + 1] > array[i]) {
                     array.splice(i, 1);
                     break;
+                } else if (array[i] > array[i + 1]) {
+                    array.splice(i + 1, 1);
+                    break;
+
                 }
             }
             return array.join("");
-        } else if (n == 9999) {
-            return "999";
         } else {
             return "-1";
         }
