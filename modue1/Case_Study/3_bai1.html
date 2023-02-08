@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array1 = [];
+    let array2 = [];
+    let sum = 0;
+    let n=+prompt("Nhập số lượng phần tử mảng a : ")
+    for (let i = 0; i < n; i++) {
+        array1[i] = +prompt("Nhập các phần tử mảng a : ");
+    }
+    for (let j=0;j<array1.length;j++){
+       sum+=array1[j];
+       array2.push(sum);
+    }
+    document.write("Kết quả prefixSums là : " + array2);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập xâu kí tự muốn chuẩn hóa : ");
+    let a = string.toUpperCase().split("");
+
+    function check() {
+        for (let i = 0; i < a.length; i++) {
+            a[i] = a[i].toLowerCase().charAt(0) + a[i].substring(1);
+        }
+    }
+    document.write("Xâu sau khi chuẩn hóa là : " + a.join(""));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập tiền lương của nhân viên : ");
+    let tax;
+    let luongRong;
+    if (n >= 15000000) {
+        tax = (n * 20 / 100);
+        luongRong = n - tax;
+    } else if (n >= 7000000) {
+        tax = n * 10 / 100;
+        luongRong = n - tax;
+    } else if (n < 7000000) {
+        tax = n * 5 / 100;
+        luongRong = n - tax;
+    } else {
+        document.write("Số lương không hợp lệ :");
+    }
+    document.write("Số tiền lương ròng mà nhân viên nhận được là : " + luongRong);
+</script>
+</body>
+</html>

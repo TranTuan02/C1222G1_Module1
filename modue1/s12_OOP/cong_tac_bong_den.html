@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+
+        }
+
+        isEmpty() {
+            if (this.weight >= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            if (this.isEmpty) {
+                this.weight--;
+            } else {
+                alert("hết táo rồi :");
+            }
+
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setGender() {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Female";
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.Gender == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        CheckApple(Apple) {
+            if (Apple.isEmpty) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        Eat(Apple) {
+            if (this.CheckApple(Apple)) {
+                Apple.decrease();
+                this.weight++;
+            } else {
+                alert("ăn hết táo rồi :");
+            }
+        }
+    }
+
+    let Apple1 = new Apple(10);
+    let Human1 = new Human("Adam", 1, 45);
+    let Human2 = new Human("Eva", 0, 50)
+    for (let i = 0; i < 5; i++) {
+        document.write("Khối lượng quả táo : " + Apple1.getWeight() + "<br>");
+        document.write(Human1.getName() + " Cân nặng : " + Human1.getWeight() + "<br>");
+        Human1.Eat(Apple1)
+        document.write("Adam ăn táo :" + "<br>" + "Cân nặng :" + Human1.getWeight() + "<br>");
+        document.write(Human2.getName() + " Cân nặng : " + Human2.getWeight() + "<br>");
+        Human2.Eat(Apple1)
+        document.write("Eva ăn táo :" + "<br>" + "Cân nặng :" + Human2.getWeight() + "<br>");
+    }
+
+
+</script>
+</body>
+</html>

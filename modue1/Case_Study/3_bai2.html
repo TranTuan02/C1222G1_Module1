@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    let c = [];
+    let d;
+    let n = +prompt("Nhập số lượng phần tử mảng a : ");
+    for (let i = 0; i < n; i++) {
+        a[i] = +prompt("Nhập các phần tử mảng a : ");
+    }
+    document.write("Mảng a : " + a + "<br>");
+    let m = +prompt("Nhập số lượng phần tử mảng b  : ");
+    for (let i = 0; i < m; i++) {
+        b[i] = +prompt("Nhập các phần tử mảng b : ");
+    }
+    document.write("Mảng b : " + b + "<br>");
+    for (let i = 0; i < m; i++) { //<a.length
+        // for (let j = 0; j < b.length; j++) {
+        //     if (b[j]===a[i]){
+        //         b.splice(j,1);
+        d = a.indexOf(b[i]);
+        if (d == -1) {
+            c.push(b[i]);
+        }
+    }
+    document.write("Kết quả missingValue là : " + c);
+</script>
+</body>
+</html>

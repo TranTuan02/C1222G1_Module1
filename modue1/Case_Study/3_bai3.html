@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [];
+    let denominators = [];
+    let n = +prompt("Nhập số lượng phần tử của tử : ");
+    for (let i = 0; i < n; i++) {
+        numerators[i] = +prompt("Nhập các phần tử : ");
+    }
+    document.write("numerators là : " + numerators + "<br>");
+    let m = +prompt("Nhập số lượng phần tử của mẫu : ")
+    for (let i = 0; i < m; i++) {
+        denominators[i] = +prompt("Nhập các phần tử : ");
+    }
+    document.write("denominators là : " + denominators + "<br>");
+    let index = 0;
+    let max = 0;
+    for (let i = 0; i < numerators.length; i++) {
+        if (numerators[i] / denominators[i] > max) {
+            max = numerators[i] / denominators[i];
+            index++;
+        }
+    }
+    document.write(" Phân số lớn nhất là " + max + "<br>" + "chỉ số là : " + index);
+</script>
+</body>
+</html>

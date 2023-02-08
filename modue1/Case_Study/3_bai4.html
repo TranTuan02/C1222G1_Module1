@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+    let arrayChu = ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín", "Không"];
+    let number = prompt("Nhập số muốn in ra : ");
+    let array1 = number.split("");
+    let array2 = [];
+    for (let i = 0; i < arrayNumber.length; i++) {
+        for (let j = 0; j < number.length; j++) {
+            if (array1[i] == arrayNumber[j]) {
+                array2.push(arrayChu[j]);
+            }
+        }
+    }
+    document.write("Số in ra màn hình là : " + array2.join(" "));
+</script>
+</body>
+</html>
