@@ -11,7 +11,8 @@
 
     function check() {
         for (let i = 0; i < a.length; i++) {
-            a[i] = a[i].toLowerCase().charAt(0) + a[i].substring(1);
+            a[i] = a[i].charAt(0).toLowerCase() + a[i].substring(1);
+
         }
     }
     document.write("Xâu sau khi chuẩn hóa là : " + a.join(""));
