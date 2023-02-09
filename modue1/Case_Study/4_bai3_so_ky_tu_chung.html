@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập xâu kí tự bất kì chuỗi thứ nhất : ");
+    let b = prompt("Nhập xâu kí tự bất kì chuỗi thứ hai : ");
+    let array = a.split("");
+    let array1 = b.split("");
+    let array2=[];
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array1.length; j++) {
+            if (array[i] === array1[j]) {
+                array2.push(array1[j]);
+                array1.splice(j,1);
+                array.splice(i,1);
+                j--;
+                i--;
+                count++;
+            }
+        }
+    }
+    document.write("xâu thứ nhất là : " + a);
+    document.write("Xâu thứ hai là : " + b);
+    document.write("kết quả  commonCharacterCount là : " + count);
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p4>Menu</p4>
+<fieldset style="height: 500px; width: 500px">
+    <table>
+        <tr>
+            <th>Tên món</th>
+            <th> Gia tiền</th>
+            <th> Số lượng món</th>
+        </tr>
+        <tr>
+            <td>Cafe</td>
+            <td>7000</td>
+            <td><input id="cafe" type="number"></td>
+        </tr>
+        <tr>
+            <td>Nước Cam</td>
+            <td>10000</td>
+            <td><input id="orange" type="number"></td>
+        </tr>
+        <tr>
+            <td>Cà rốt</td>
+            <td>12000</td>
+            <td><input id="carrot" type="number"></td>
+        </tr>
+        <tr>
+            <td>Nước dừa</td>
+            <td>15000</td>
+            <td><input id="coconut" type="number"></td>
+        </tr>
+        <tr>
+            <td>Nước Dưa Hấu</td>
+            <td>17000</td>
+            <td><input id="watermelon" type="number"></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="showResult()">Tổng tiền</button>
+            </td>
+            <td id="result"></td>
+        </tr>
+    </table>
+    <script>
+        function showResult() {
+            let result = document.getElementById('result');
+            let cafe = document.getElementById('cafe').value;
+            let orange = document.getElementById('orange').value;
+            let carrot = document.getElementById('carrot').value;
+            let coconut = document.getElementById('coconut').value;
+            let watermelon = document.getElementById('watermelon').value;
+            let total = cafe * 7000 + orange * 10000 + carrot * 15000 + coconut * 15000 + watermelon * 17000;
+            result.innerHTML = total + "VNĐ";
+        }
+    </script>
+</fieldset>
+</body>
+</html>

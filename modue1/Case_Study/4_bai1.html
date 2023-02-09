@@ -6,16 +6,30 @@
 </head>
 <body>
 <script>
-    let string = prompt("Nhập xâu kí tự muốn chuẩn hóa : ");
-    let a = string.toUpperCase().split("");
+    let m = prompt("Nhập xâu kí tự muốn chuẩn hóa : ");
 
-    function check() {
+    function checkString(str) {
+        let a = str.toLowerCase().split(" ");
         for (let i = 0; i < a.length; i++) {
-            a[i] = a[i].charAt(0).toLowerCase() + a[i].substring(1);
+            a[i] = a[i].toUpperCase().charAt(0) + a[i].substring(1)
 
         }
+        return a.join(" ");
     }
-    document.write("Xâu sau khi chuẩn hóa là : " + a.join(""));
+
+    document.write("Xâu sau khi chuẩn hóa là : " + checkString(m) + "<br>");
+
+    function max(arr) {
+        let max = arr[0];
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > max) {
+                max = arr[j];
+            }
+        }
+        return max;
+    }
+    let array = checkString(m).split(" ");
+    document.write(" từ dài nhất trong chuỗi là : " + max(array));
 </script>
 
 </body>

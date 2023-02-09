@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt("Nhập dộ dài mảng cha ");
+    let arr = new Array(m);
+    for (let i = 0; i < arr.length; i++) {
+        let n = +prompt("Nhập độ dài mảng con : " + (i + 1));
+        let arr2 = [];
+        for (let j = 0; j < n; j++) {
+            arr2[j] = +prompt("Nhập các phần tử mảng con : " + (j + 1));
+            arr[i] = arr2;
+        }
+    }
+    // let m = +prompt("Nhập độ dài mảng cha : ");
+    // let n = +prompt("Nhập độ dài mảng con : ");
+    // let array = [];
+    // for (let i = 0; i < m; i++) {
+    //     array[i] = [];
+    //     for (let j = 0; j < n; j++) {
+    //         array[i][j] = +prompt("Nhập các phần tử mảng con : ")
+    //     }
+    // }
+    // console.log(array);
+    let sum = 0;
+    function tong(m, n) {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr[j] % 2 === 0) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+    }
+    document.write("Tổng các số chẵn trong ma trận là : " + sum);
+</script>
+
+</body>
+</html>
