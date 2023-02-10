@@ -27,16 +27,20 @@
     // }
     // console.log(array);
     let sum = 0;
-    function tong(m, n) {
+
+    function tong(arr) {
         for (let i = 0; i < arr.length; i++) {
-            for (let j = 0; j < arr2.length; j++) {
-                if (arr[j] % 2 === 0) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 === 0) {
                     sum += arr[i][j];
                 }
             }
         }
+        return sum;
     }
-    document.write("Tổng các số chẵn trong ma trận là : " + sum);
+
+    document.write("Mảng sau khi nhập là : " + arr + "<br>");
+    document.write("Tổng các số chẵn trong mảng là : " + tong(arr));
 </script>
 
 </body>

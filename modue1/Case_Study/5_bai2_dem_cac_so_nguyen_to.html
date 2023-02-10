@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt("Nhập số lượng phần tử mảng cha : ");
+    let arr = new Array(m);
+    for (let i = 0; i < arr.length; i++) {
+        let n = +prompt("Nhập số lượng phần tử mảng con : " + (i + 1));
+        let array2 = [];
+        for (let j = 0; j < n; j++) {
+            array2[j] = +prompt("Nhập các phần tử mảng con : " + (j + i));
+            arr[i] = array2;
+        }
+    }
+
+    function check(n) {
+        let count = 0;
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
+                count++;
+            }
+        }
+        if (count === 2) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    let array2 = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (check(arr[i][j]) === true) {
+                array2.push(arr[i][j]);
+            }
+        }
+    }
+    document.write("mảng sau khi nhập là : " + arr + "<br>");
+    document.write("Số nguyên tố trong mảng gồm : " + array2 + "<br>");
+    document.write("Có : " + array2.length + " Số nguyên tố ");
+</script>
+
+</body>
+</html>
